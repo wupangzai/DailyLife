@@ -1,0 +1,42 @@
+<view>
+  <view wx:for="{{ content }}" wx:key="id" class="item">
+    
+      <navigator url="/pages/othercheck/othercheck?_openid={{ item._openid }}">
+        <image class="avatar" src="{{ item.userInfo.avatarUrl }}">
+        </image>
+      </navigator>
+      <view class="itemList">
+        <text class="nickName">{{ item.userInfo.nickName }}</text>
+        <text class="texts" >{{ item.textInput }}</text>
+        <view  data-checkimages="{{ item.fileID }}" bindtap="checkimages">
+          <image src="{{ item }}" class="images" mode="aspectFill" 
+          wx:for="{{ item.fileID }}" wx:key="id"   data-index="{{ index }}" bindtap="checkimage">
+          </image>
+
+        </view>
+        <text class="date">{{ item.date }}</text>
+
+
+        <view class="commentControl"  wx:if="{{ flag == index }}"  bindtap="commentButton">
+         <image src="cloud://niuniuniu-8gio8h7c12f48fb9.6e69-niuniuniu-8gio8h7c12f48fb9-1304417889/images-tabBar/comment.png" class="commentLogo">
+         </image>
+         <text > 评论 </text>
+        </view> 
+        <view wx:if="{{ flag == index }}">
+          <input type="text"  adjust-position="true"  focus="{{ commentButton }}" 
+           wx:if="{{ commentButton }}" bindinput="input" bindconfirm="inputConfirm" data-getComment="{{ item.comment }}" />
+        </view>
+        <text class="button" bindtap="controller" data-index="{{ index }}" data-id="{{ item._id }}"> ·· </text>
+        <view class="comment" wx:for="{{ item.comment }}" wx:key="id">
+          <view class="comments">
+            <text class="commentnickName"> {{ item.nickName }} :</text>
+          <text class="commentText"> {{ item.text }} </text>
+          </view>
+
+        </view>        
+      </view>
+  
+  </view>
+
+</view>
+

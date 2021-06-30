@@ -1,0 +1,28 @@
+<!-- 顶部背景图 -->
+<view class="bgcimage">
+  <image src="{{ bgcimage.bgcImage? bgcimage.bgcImage : bgcImage }}"
+  mode="scaleToFill" wx:if="{{ bgcimage.bgcImage?  bgcimage.bgcImage : bgcImage }}" bindtap="bgcAction" 
+  data-src="{{ bgcimage.bgcImage? bgcimage.bgcImage : bgcImage }}"></image>
+  <text wx:else class="bgctext" bindtap="uploadImage"> 点击上传图片</text>
+</view>
+<!-- 用户昵称头像 -->
+<view class="info">
+  <view class="infoItem">
+    <text>{{ userInfo.nickName }}</text>
+    <image src="{{ userInfo.avatarUrl }}"> </image>
+  </view>
+</view>
+<!-- 用户个人动态 -->
+
+<view class="itemList">
+  <view class="item" wx:for="{{ content }}" wx:key="id">
+    <text class="date"> {{ item.date }} </text>
+    <!-- <view wx:for="{{ item.fileID }}" wx:key="id"> -->
+      <navigator url="/pages/detail/detail?userInfo={{ userInfoex }}&_id={{ item._id }}">
+        <image src="{{ item.fileID[0] }}"  bindtap="checkDetail"></image>
+      </navigator>
+    <!-- </view> -->
+  <text class="texts" bindtap="checkDetail" >{{ item.textInput}}</text>
+  </view>
+
+</view>

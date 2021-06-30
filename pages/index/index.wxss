@@ -1,0 +1,97 @@
+.images{
+  width: 190rpx;
+  height: 190rpx;
+
+}
+.avatar{
+  width: 100rpx;
+  height: 100rpx;
+}
+.item{
+  display: flex;
+  margin: 20rpx 30rpx;
+  border-bottom: #ccc 1rpx solid;
+}
+.item .itemList{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  width: 100%;
+}
+.texts{
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-line;
+  margin-bottom: 10rpx;
+}
+
+.nickName{
+  color: rgb(94, 109, 145);
+  font-weight: 500;
+
+}
+
+.date{
+  font-size: 20rpx;
+  color:#ccc;
+  margin-top: 20rpx;
+}
+
+
+
+.button{
+  margin-left: auto;
+  margin-bottom: 20rpx;
+  width: 70rpx;
+  height: 30rpx;
+  border-radius: 20rpx;
+  background-color: rgb(247, 247, 247);
+  color: rgb(88, 95, 119);
+  text-align: center;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.commentLogo{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+
+.commentControl{
+  margin-left: auto;
+  margin-right: 40rpx;
+  width: 130rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: white;
+  background-color: rgb(76, 76, 76);
+  font-size: 25rpx;
+  position: relative;
+  left: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx;
+}
+
+.comment{
+  background-color: rgb(240, 239, 239);
+  width: 570rpx;
+  
+
+}
+.comment text{
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-line;
+}
+.comment .commentnickName{
+  color: rgb(94, 109, 145);
+  font-weight: 500;
+}
+.comments{
+  margin: 2rpx 15rpx;
+}

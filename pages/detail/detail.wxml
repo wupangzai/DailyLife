@@ -1,0 +1,35 @@
+
+<!-- 用户头像，昵称，输入内容 -->
+<view class="content">
+  <image src="{{ content.userInfo.avatarUrl}}" class="avatar"></image>
+
+  <view class="text">
+    <text class="nickName">{{ content.userInfo.nickName }}</text>
+  <text class="textInput"> {{ content.textInput }} </text>
+  </view>
+</view>
+
+<!-- 用户上传的图片 -->
+<view class="images">
+  <view class="item" wx:for="{{ content.fileID }}" wx:key="id">
+    <image src="{{ item }}" class="image"></image>
+  </view>
+</view>
+
+<!-- 时间及控件 -->
+  <view class="footer"> 
+    <text class="date"> {{content.date}} </text> 
+    <text class="delete" bindtap="delete">删除</text>
+
+    
+   <view class="commentControl" wx:if="{{ control }}" >
+    <image src="cloud://niuniuniu-8gio8h7c12f48fb9.6e69-niuniuniu-8gio8h7c12f48fb9-1304417889/images-tabBar/comment.png" class="commentLogo">
+    </image>
+     <text > 评论 </text>
+  
+  
+  </view> 
+
+
+    <text class="button" bindtap="controller"> ·· </text>
+  </view>

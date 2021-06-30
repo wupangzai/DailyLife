@@ -1,0 +1,62 @@
+/* pages/login/login.wxss */
+.up{
+  width: 100%;
+  background-color: #3a4861;
+  height: 450rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.up .upcontent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.up image{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 100%;
+}
+
+
+
+.upcontent .login{
+  width: 210rpx;
+  height: 80rpx;
+  margin-top: 20rpx;
+  border-radius: 25rpx;
+}
+.nickName{
+  font-size: 36rpx;
+  color: white;
+  font-weight: 300;
+  margin-top: 20rpx;
+}
+
+
+.UI{
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.list{
+  margin-top: 80rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.list .item{
+  width: 50%;
+  height: 250rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.list .item text{
+  font-size: 24rpx;
+}

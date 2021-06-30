@@ -1,0 +1,96 @@
+
+/* 具体细节样式 */
+.avatar{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.nickName{
+  color: rgb(94, 109, 145);
+}
+
+.textInput{
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-line;
+  margin-bottom: 10rpx;
+}
+
+.image{
+  width: 200rpx;
+  height: 200rpx;
+}
+
+ /* flex总体样式 */
+
+ .content{
+   display: flex;
+   flex-wrap: wrap;
+   margin: 30rpx 30rpx;
+ }
+
+ .text{
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   margin-left: 15rpx;
+ }
+
+ .images{
+   margin-left:140rpx;
+   margin-top: 20rpx;
+   display: flex;
+   flex-wrap: wrap;
+ }
+
+ .date{
+   margin-left: 140rpx;
+   margin-top: 20rpx;
+   color: #ccc;
+   font-size: 20rpx;
+ }
+.footer{
+  display: flex;
+}
+.button{
+  margin-left: auto;
+  margin-right: 30rpx;
+  margin-top: 20rpx;
+  width: 70rpx;
+  height: 30rpx;
+  background-color: rgb(247, 247, 247);
+  color: rgb(88, 95, 119);
+  text-align: center;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.commentControl{
+  margin-left: auto;
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: white;
+  background-color: rgb(76, 76, 76);
+  font-size: 25rpx;
+  position: relative;
+  left: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx;
+}
+.commentLogo{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+
+.delete{
+  margin-top: 15rpx;
+  color: rgb(145, 150, 187);
+  margin-left: 20rpx;
+  font-size:24rpx;
+}

@@ -1,0 +1,57 @@
+<!--pages/login/login.wxml-->
+<!-- 页面顶部 -->
+<view class="up">
+<view class="upcontent" >
+  <block wx:if="{{ !hasUserInfo }}">
+    <image src="cloud://niuniuniu-8gio8h7c12f48fb9.6e69-niuniuniu-8gio8h7c12f48fb9-1304417889/images-tabBar/mee.png"
+  mode="cover">
+  </image>
+  <button class="login" bindtap="getUserInfo">登录</button>
+  </block>
+  <block wx:if="{{ hasUserInfo }}">
+    <image src="{{ userInfo.avatarUrl }}"
+  mode="cover">
+  </image>
+    <text class="nickName">{{ userInfo.nickName }}</text>
+  </block>
+</view>
+
+</view>
+
+<!-- 页面底部 -->
+<view class="list">
+     <!-- -------------------------------------------------------------------------------------- -->
+    <view class="item" wx:if="{{ !openid }}" bindtap="sendcontrol">
+      <image src="cloud://niuniuniu-8gio8h7c12f48fb9.6e69-niuniuniu-8gio8h7c12f48fb9-1304417889/images/16186656707371.jpg"
+     class="UI"></image>
+      <text>发表</text>
+    </view>
+
+    <navigator class="item" url="/pages/send/send?_openid={{ openid }}&userinfo={{ userinfo }}" wx:if="{{ openid }}">
+      <image src="cloud://niuniuniu-8gio8h7c12f48fb9.6e69-niuniuniu-8gio8h7c12f48fb9-1304417889/images/16186656707371.jpg"
+     class="UI"></image>
+      <text>发表</text>
+     </navigator>
+     <!-- -------------------------------------------------------------------------------------- -->
+  <view class="item">
+      <image src="cloud://niuniuniu-8gio8h7c12f48fb9.6e69-niuniuniu-8gio8h7c12f48fb9-1304417889/images/16186656820688.jpg"
+     class="UI" ></image>
+      <text>暂无</text>
+  </view>
+  <view class="item">
+      <image src="cloud://niuniuniu-8gio8h7c12f48fb9.6e69-niuniuniu-8gio8h7c12f48fb9-1304417889/images/16186656956840.jpg"
+     class="UI"></image>
+      <text>暂无</text>
+  </view>
+  <view class="item" wx:if="{{ !openid }}" bindtap="sendcontrol">
+    <image src="cloud://niuniuniu-8gio8h7c12f48fb9.6e69-niuniuniu-8gio8h7c12f48fb9-1304417889/images/16186657199696.jpg"
+     class="UI" ></image>
+      <text>我的动态</text>
+  </view>
+  <navigator class="item" url="/pages/mine/mine?_openid={{ openid }}&userinfo={{ userinfo }}" wx:if="{{ openid }}">
+      <image src="cloud://niuniuniu-8gio8h7c12f48fb9.6e69-niuniuniu-8gio8h7c12f48fb9-1304417889/images/16186657199696.jpg"
+     class="UI" ></image>
+      <text>我的动态</text>
+  </navigator>
+
+</view>

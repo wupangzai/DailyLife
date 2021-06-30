@@ -1,0 +1,27 @@
+.textAdd{
+  padding: 20rpx 50rpx;
+  border-radius: 5rpx;
+}
+
+.imagesarea{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 40rpx;
+}
+
+.item{
+  margin: 0 10rpx;
+}
+
+
+.imageAdd{
+  width: 200rpx;
+  height: 200rpx;
+}
+
+button{
+  margin-top: 20rpx;
+  width: 250rpx !important;
+}

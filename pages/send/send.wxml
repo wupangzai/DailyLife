@@ -1,0 +1,15 @@
+<!-- 文字区域 -->
+<view>
+  <textarea  bindinput="addText"  cols="30" rows="10" class="textAdd" placeholder="这一刻的想法..."></textarea>
+</view>
+<!-- 图片框 -->
+<view class="imagesarea">
+  <view class="item" wx:for="{{ images }}" wx:key="id"> 
+    <image src="{{ item }}" class="imageAdd"></image>
+  </view>
+
+  <view class="item">  
+  <image src="/images-tabBar/add.png" class="imageAdd" bindtap="addImages"></image>
+  </view>
+</view>
+<button bindtap="sendButton" type="primary" class="send">发表</button>
